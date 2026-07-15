@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Creator from './components/Creator';
 import Viewer from './components/Viewer';
+import Gallery from './components/Gallery';
 import { decodeData } from './utils/codec';
 import './index.css';
 
 function App() {
   const [cardData, setCardData] = useState(null);
+  const [selectedThemeId, setSelectedThemeId] = useState(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -18,11 +20,15 @@ function App() {
     }
   }, []);
 
-  return (
-    <>
-      {cardData ? <Viewer data={cardData} /> : <Creator />}
-    </>
-  );
+  if (cardData) {
+    return <Viewer data={cardData} />;
+  }
+
+  if (selectedThemeId) {
+    return <Creator themeId={selectedThemeId} onBack={() => setSelectedThemeId(null)} />;
+  }
+
+  return <Gallery onSelectTheme={setSelectedThemeId} />;
 }
 
 export default App;
