@@ -104,7 +104,7 @@ export default function Gallery({ onSelectTheme }) {
         </div>
 
         <div className="gallery-content">
-          <div className="theme-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+          <div className="theme-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '2rem' }}>
             {filteredThemes.map(theme => (
               <div key={theme.id} className="theme-card" onClick={() => onSelectTheme(theme.id)}>
                 <LiveThumbnail themeId={theme.id} />
