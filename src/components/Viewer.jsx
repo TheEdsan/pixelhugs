@@ -19,14 +19,14 @@ import FoggyMirror from './FoggyMirror';
 import TimeCapsule from './TimeCapsule';
 import TarotReading from './TarotReading';
 
-export default function Viewer({ data, isPreview = false }) {
+export default function Viewer({ data, isPreview = false, isEditor = false }) {
   const [showEmojis, setShowEmojis] = useState([]);
   
   const theme = themes.find(t => t.id === data.themeId) || themes[0];
   const layout = data.layoutId;
 
   useEffect(() => {
-    const emojis = Array.from({ length: isPreview ? 10 : 20 }).map((_, i) => ({
+    const emojis = Array.from({ length: (isPreview || isEditor) ? 10 : 20 }).map((_, i) => ({
       id: i,
       left: Math.random() * 100 + '%',
       animationDuration: (Math.random() * 3 + 4) + 's',
@@ -34,14 +34,14 @@ export default function Viewer({ data, isPreview = false }) {
       fontSize: (Math.random() * 20 + 20) + 'px'
     }));
     setShowEmojis(emojis);
-  }, [isPreview]);
+  }, [isPreview, isEditor]);
 
   const containerStyle = {
     background: theme.bg,
     color: theme.textColor,
     fontFamily: theme.fontFamily,
-    minHeight: isPreview ? '100%' : '100vh',
-    height: isPreview ? '100%' : 'auto',
+    minHeight: (isPreview || isEditor) ? '100%' : '100vh',
+    height: (isPreview || isEditor) ? '100%' : 'auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -49,7 +49,7 @@ export default function Viewer({ data, isPreview = false }) {
     padding: '2rem',
     position: 'relative',
     overflow: 'hidden',
-    borderRadius: isPreview ? '20px' : '0'
+    borderRadius: (isPreview || isEditor) ? '20px' : '0'
   };
 
   const cardStyle = {
