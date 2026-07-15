@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { themes } from '../data/templates';
+import Envelope from './Envelope';
 
 export default function Viewer({ data, isPreview = false }) {
   const [showEmojis, setShowEmojis] = useState([]);
   
   const theme = themes.find(t => t.id === data.themeId) || themes[0];
-  const isFullScreen = data.layoutId === 'full_screen';
+  const isEnvelope = data.layoutId === 'envelope_3d';
 
   useEffect(() => {
     const emojis = Array.from({ length: isPreview ? 10 : 20 }).map((_, i) => ({
@@ -35,16 +36,34 @@ export default function Viewer({ data, isPreview = false }) {
   };
 
   const cardStyle = {
-    background: isFullScreen ? 'transparent' : theme.cardBg,
-    padding: isFullScreen ? '1rem' : '2.5rem',
-    borderRadius: isFullScreen ? '0' : '20px',
-    boxShadow: isFullScreen ? 'none' : '0 20px 40px rgba(0,0,0,0.15)',
+    background: theme.cardBg,
+    padding: '2.5rem',
+    borderRadius: '20px',
+    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
     maxWidth: '500px',
     width: '100%',
     textAlign: 'center',
     zIndex: 10,
-    backdropFilter: isFullScreen ? 'none' : 'blur(10px)'
+    backdropFilter: 'blur(10px)'
   };
+
+  const innerContent = (
+    <>
+      <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 'bold' }}>
+        Para: {data.toName || '...'}
+      </h2>
+      
+      <p style={{ fontSize: '1.2rem', whiteSpace: 'pre-wrap', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+        {data.message || 'Tu hermoso mensaje aparecerá aquí...'}
+      </p>
+
+      {data.fromName && (
+        <div style={{ fontSize: '1.1rem', fontStyle: 'italic', opacity: 0.9 }}>
+          Con cariño,<br/><strong>{data.fromName}</strong>
+        </div>
+      )}
+    </>
+  );
 
   return (
     <div style={containerStyle}>
@@ -59,21 +78,17 @@ export default function Viewer({ data, isPreview = false }) {
         </div>
       ))}
 
-      <div style={cardStyle} className="animate-pop-in">
-        <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 'bold' }}>
-          Para: {data.toName || '...'}
-        </h2>
-        
-        <p style={{ fontSize: '1.2rem', whiteSpace: 'pre-wrap', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-          {data.message || 'Tu hermoso mensaje aparecerá aquí...'}
-        </p>
-
-        {data.fromName && (
-          <div style={{ fontSize: '1.1rem', fontStyle: 'italic', opacity: 0.9 }}>
-            Con cariño,<br/><strong>{data.fromName}</strong>
+      {isEnvelope ? (
+        <Envelope isPreview={isPreview}>
+          <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>
+            {innerContent}
           </div>
-        )}
-      </div>
+        </Envelope>
+      ) : (
+        <div style={cardStyle} className="animate-pop-in">
+          {innerContent}
+        </div>
+      )}
 
       {!isPreview && (
         <div style={{ position: 'fixed', bottom: '15px', right: '15px', zIndex: 100 }}>
@@ -85,7 +100,8 @@ export default function Viewer({ data, isPreview = false }) {
             textDecoration: 'none', 
             fontSize: '0.85rem', 
             backdropFilter: 'blur(5px)',
-            fontWeight: '600'
+            fontWeight: '600',
+            fontFamily: 'var(--font-modern)'
           }}>
             ✨ Crear mi propia carta
           </a>

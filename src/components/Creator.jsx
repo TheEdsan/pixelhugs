@@ -70,6 +70,14 @@ export default function Creator({ themeId, onBack }) {
           <input type="text" name="fromName" value={formData.fromName} onChange={handleChange} placeholder="Tu nombre" maxLength={50} />
         </div>
 
+        <div className="form-group">
+          <label>Formato Mágico</label>
+          <select name="layoutId" value={formData.layoutId} onChange={handleChange}>
+            <option value="envelope_3d">Sobre Mágico 3D (Animado)</option>
+            <option value="center_card">Tarjeta Clásica (Directa)</option>
+          </select>
+        </div>
+
         <button className="btn-primary" onClick={handleGenerate}>✨ Crear Enlace Mágico</button>
 
         {generatedLink && (

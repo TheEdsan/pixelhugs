@@ -82,5 +82,6 @@ export const themes = [
 ];
 
 export const layouts = [
-  { id: 'center_card', name: 'Tarjeta Centrada' }
+  { id: 'envelope_3d', name: 'Sobre Mágico 3D' },
+  { id: 'center_card', name: 'Tarjeta Clásica' }
 ];

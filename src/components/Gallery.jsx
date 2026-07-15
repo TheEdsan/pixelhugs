@@ -1,5 +1,6 @@
 import React from 'react';
 import { themes } from '../data/templates';
+import LiveThumbnail from './LiveThumbnail';
 
 export default function Gallery({ onSelectTheme }) {
   // Group themes by category
@@ -23,14 +24,13 @@ export default function Gallery({ onSelectTheme }) {
             <div className="theme-grid">
               {categories[category].map(theme => (
                 <div key={theme.id} className="theme-card" onClick={() => onSelectTheme(theme.id)}>
-                  <div className="theme-image-wrapper">
-                    <img src={theme.thumbnail} alt={theme.name} loading="lazy" />
-                    <div className="theme-overlay">
-                      <button className="btn-select">Crear esta carta</button>
-                    </div>
+                  <LiveThumbnail themeId={theme.id} />
+                  <div className="theme-overlay">
+                    <button className="btn-select">Personalizar</button>
                   </div>
                   <div className="theme-info">
                     <h3>{theme.name}</h3>
+                    <span className="theme-badge">Live</span>
                   </div>
                 </div>
               ))}
