@@ -144,8 +144,11 @@ export default function Creator({ themeId, onBack }) {
       </div>
       
       <div className="editor-preview">
-        <div className="preview-wrapper">
-          <Viewer data={formData} isPreview={true} />
+        <div className="preview-wrapper" style={{ width: '100%', height: '100%' }}>
+          {/* Passing isPreview={false} makes it fully interactive.
+              The key forces a complete remount of the component tree whenever data changes, 
+              ensuring animations reset and play from the beginning for the user to test. */}
+          <Viewer key={JSON.stringify(formData)} data={formData} isPreview={false} />
         </div>
       </div>
     </div>
