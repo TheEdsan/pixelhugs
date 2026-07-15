@@ -1,311 +1,1502 @@
 export const themes = [
-  // --- Categoría: Amor ❤️ ---
   {
-    id: 'love_watercolor',
-    name: 'Acuarela Romántica',
-    category: 'Amor ❤️',
-    bg: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)',
-    textColor: '#881337',
-    cardBg: 'rgba(255, 255, 255, 0.7)',
-    fontFamily: '"Georgia", serif',
-    floatingEmoji: '🌸',
-    presets: [
-      "No hay palabras suficientes para describir lo mucho que te quiero. ¡Eres lo mejor que me ha pasado!",
-      "Cada día a tu lado es una nueva aventura que quiero guardar para siempre. Te amo infinito.",
-      "Gracias por ser mi refugio, mi sonrisa y mi persona favorita en todo el mundo."
+    "id": "theme_1",
+    "name": "Moderno 1",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to top, #c471f5 0%, #fa71cd 100%)",
+    "textColor": "#111827",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "❤️",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'love_midnight',
-    name: 'Amor de Medianoche',
-    category: 'Amor ❤️',
-    bg: 'radial-gradient(circle at top right, #310e68 0%, #5f0f40 100%)',
-    textColor: '#ffb3c6',
-    cardBg: 'rgba(0, 0, 0, 0.6)',
-    fontFamily: '"Playfair Display", serif',
-    floatingEmoji: '🌙',
-    presets: [
-      "Incluso en la noche más oscura, tú eres mi estrella guía. Te amo.",
-      "Mi momento favorito del día es cuando por fin puedo verte.",
-      "Estaré contigo en cada sueño y en cada despertar."
+    "id": "theme_2",
+    "name": "Moderno 2",
+    "category": "Amor ❤️",
+    "bg": "#f8fafc",
+    "textColor": "#000000",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "💕",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'love_roses',
-    name: 'Rosas Eternas',
-    category: 'Amor ❤️',
-    bg: '#7f1d1d',
-    textColor: '#fee2e2',
-    cardBg: 'rgba(255, 255, 255, 0.1)',
-    fontFamily: '"Outfit", sans-serif',
-    floatingEmoji: '🌹',
-    presets: [
-      "Te amo más que ayer, pero menos que mañana.",
-      "Un millón de rosas no bastan para expresar lo que siento por ti.",
-      "Eres la casualidad más hermosa de mi vida."
+    "id": "theme_3",
+    "name": "Pastel 3",
+    "category": "Amor ❤️",
+    "bg": "radial-gradient(circle, #2e1065 0%, #000000 100%)",
+    "textColor": "#111827",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "💘",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'love_cloud',
-    name: 'Nubes de Algodón',
-    category: 'Amor ❤️',
-    bg: 'linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)',
-    textColor: '#831843',
-    cardBg: 'rgba(255, 255, 255, 0.8)',
-    fontFamily: '"Comic Sans MS", cursive',
-    floatingEmoji: '☁️',
-    presets: [
-      "Haces que mi corazón flote en las nubes.",
-      "Me haces sentir mariposas todos los días.",
-      "Eres mi pedacito de cielo."
-    ]
-  },
-
-  // --- Categoría: Amistad 🤝 ---
-  {
-    id: 'neon_vibe',
-    name: 'Cyber Neon',
-    category: 'Amistad 🤝',
-    bg: '#09090b',
-    textColor: '#f0abfc',
-    cardBg: 'rgba(24, 24, 27, 0.8)',
-    fontFamily: '"Inter", sans-serif',
-    floatingEmoji: '⚡',
-    presets: [
-      "¡Nuestra amistad tiene más energía que una central nuclear! Gracias por estar siempre ahí.",
-      "Eres esa persona que ilumina mis días más oscuros. ¡Nunca cambies, bro!",
-      "Por más aventuras locas y momentos épicos juntos. ¡Te quiero muchísimo!"
+    "id": "theme_4",
+    "name": "Oscuro 4",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to right, #434343 0%, #000000 100%)",
+    "textColor": "#000000",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "💖",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'friend_sunflower',
-    name: 'Campo de Girasoles',
-    category: 'Amistad 🤝',
-    bg: 'linear-gradient(to right, #f6d365 0%, #fda085 100%)',
-    textColor: '#78350f',
-    cardBg: 'rgba(255, 255, 255, 0.7)',
-    fontFamily: '"Outfit", sans-serif',
-    floatingEmoji: '🌻',
-    presets: [
-      "Eres como un girasol, siempre buscando la luz y dándome energía.",
-      "Gracias por ser esa amistad que brilla más que el sol.",
-      "En las buenas y en las malas, siempre juntos."
+    "id": "theme_5",
+    "name": "Artístico 5",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(135deg, #78350f 0%, #451a03 100%)",
+    "textColor": "#ffffff",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🥰",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'friend_retro',
-    name: 'Arcade Retro',
-    category: 'Amistad 🤝',
-    bg: 'linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%)',
-    textColor: '#34d399',
-    cardBg: 'rgba(0, 0, 0, 0.8)',
-    fontFamily: 'monospace',
-    floatingEmoji: '🕹️',
-    presets: [
-      "Player 1 y Player 2, listos para conquistar el mundo.",
-      "Ningún nivel es difícil si lo pasamos juntos.",
-      "¡Nuestra amistad es un combo infinito de risas!"
+    "id": "theme_6",
+    "name": "Oscuro 6",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to right, #ff758c 0%, #ff7eb3 100%)",
+    "textColor": "#9d174d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "😍",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'friend_coffee',
-    name: 'Tarde de Café',
-    category: 'Amistad 🤝',
-    bg: '#451a03',
-    textColor: '#fef3c7',
-    cardBg: 'rgba(255, 255, 255, 0.1)',
-    fontFamily: '"Georgia", serif',
-    floatingEmoji: '☕',
-    presets: [
-      "Las mejores charlas siempre son contigo y un buen café.",
-      "Mejor que la terapia, una tarde contigo.",
-      "Por esas confidencias que se quedan entre tú, yo y el café."
-    ]
-  },
-
-  // --- Categoría: Cumpleaños 🎂 ---
-  {
-    id: 'birthday_minimal',
-    name: 'Cumpleaños Minimalista',
-    category: 'Cumpleaños 🎂',
-    bg: '#f8fafc',
-    textColor: '#0f172a',
-    cardBg: 'rgba(255, 255, 255, 0.95)',
-    fontFamily: '"Comic Sans MS", "Chalkboard SE", sans-serif',
-    floatingEmoji: '🎈',
-    presets: [
-      "¡Feliz cumpleaños! Que este nuevo año de vida te traiga tantas sonrisas como las que tú nos das.",
-      "Un año más de vida, de locuras y de ser simplemente genial. ¡Pásalo increíble!",
-      "Que todos tus deseos se hagan realidad hoy y siempre. ¡Te mando un abrazo enorme!"
+    "id": "theme_7",
+    "name": "Moderno 7",
+    "category": "Amor ❤️",
+    "bg": "#09090b",
+    "textColor": "#000000",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🌹",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'birthday_party',
-    name: 'Fiesta Confeti',
-    category: 'Cumpleaños 🎂',
-    bg: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
-    textColor: '#064e3b',
-    cardBg: 'rgba(255, 255, 255, 0.85)',
-    fontFamily: '"Outfit", sans-serif',
-    floatingEmoji: '🎉',
-    presets: [
-      "¡A celebrar por todo lo alto! Que tengas un cumpleaños inolvidable.",
-      "Es hora de comer pastel y festejarte. ¡Feliz día!",
-      "Que empiece la fiesta. ¡Te mereces lo mejor en tu día!"
+    "id": "theme_8",
+    "name": "Retro 8",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "💋",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'birthday_gold',
-    name: 'Dorado Elegante',
-    category: 'Cumpleaños 🎂',
-    bg: '#000000',
-    textColor: '#fbbf24',
-    cardBg: 'rgba(255, 215, 0, 0.1)',
-    fontFamily: '"Playfair Display", serif',
-    floatingEmoji: '🥂',
-    presets: [
-      "Un cumpleaños elegante para alguien excepcional. Mis mejores deseos.",
-      "Que este año brilles aún más. ¡Feliz Cumpleaños!",
-      "Salud, éxito y felicidad en esta nueva etapa."
+    "id": "theme_9",
+    "name": "Oscuro 9",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    "textColor": "#34d399",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "💍",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'birthday_space',
-    name: 'Cumpleaños Galáctico',
-    category: 'Cumpleaños 🎂',
-    bg: 'radial-gradient(circle, #2e1065 0%, #000000 100%)',
-    textColor: '#c084fc',
-    cardBg: 'rgba(255, 255, 255, 0.1)',
-    fontFamily: 'sans-serif',
-    floatingEmoji: '🚀',
-    presets: [
-      "Que tu próximo año sea fuera de este mundo.",
-      "¡Otra vuelta al sol completada con éxito!",
-      "Apuntando siempre a las estrellas. ¡Feliz cumple!"
-    ]
-  },
-
-  // --- Categoría: Para Ella ✨ ---
-  {
-    id: 'festive_women',
-    name: 'Celebración Floral',
-    category: 'Para Ella ✨',
-    bg: 'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)',
-    textColor: '#7f1d1d',
-    cardBg: 'rgba(255, 255, 255, 0.65)',
-    fontFamily: '"Georgia", serif',
-    floatingEmoji: '✨',
-    presets: [
-      "Eres una mujer increíble, fuerte e inspiradora. ¡Que hoy tengas el día maravilloso que mereces!",
-      "Celebramos hoy la luz y la alegría que traes a nuestras vidas. ¡Muchas felicidades!",
-      "Por tu valentía, tu belleza interior y todo lo que logras cada día. ¡Un abrazo inmenso!"
+    "id": "theme_10",
+    "name": "Artístico 10",
+    "category": "Amor ❤️",
+    "bg": "#1e293b",
+    "textColor": "#9d174d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "💌",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'women_purple',
-    name: 'Magia Púrpura',
-    category: 'Para Ella ✨',
-    bg: 'linear-gradient(to top, #c471f5 0%, #fa71cd 100%)',
-    textColor: '#4c1d95',
-    cardBg: 'rgba(255,255,255,0.8)',
-    fontFamily: '"Outfit", sans-serif',
-    floatingEmoji: '🦋',
-    presets: [
-      "Brillas con luz propia. ¡Sigue conquistando el mundo!",
-      "Eres pura magia, nunca dejes que apaguen tu chispa.",
-      "A la mujer más fuerte y hermosa que conozco."
+    "id": "theme_11",
+    "name": "Moderno 11",
+    "category": "Amor ❤️",
+    "bg": "radial-gradient(circle, #2e1065 0%, #000000 100%)",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "🫶",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'women_soft',
-    name: 'Tono Pastel',
-    category: 'Para Ella ✨',
-    bg: '#fdf4ff',
-    textColor: '#9d174d',
-    cardBg: '#fff',
-    fontFamily: '"Playfair Display", serif',
-    floatingEmoji: '🎀',
-    presets: [
-      "Tu dulzura y empatía hacen del mundo un lugar mejor.",
-      "Gracias por ponerle tanto corazón a todo lo que haces.",
-      "Eres un regalo para todos los que te rodeamos."
+    "id": "theme_12",
+    "name": "Oscuro 12",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    "textColor": "#9d174d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🔥",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'women_ocean',
-    name: 'Sirena del Mar',
-    category: 'Para Ella ✨',
-    bg: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
-    textColor: '#1e3a8a',
-    cardBg: 'rgba(255,255,255,0.7)',
-    fontFamily: '"Georgia", serif',
-    floatingEmoji: '🧜‍♀️',
-    presets: [
-      "Eres tan profunda e impredecible como el mar.",
-      "Que las olas te traigan paz y la brisa mucha alegría.",
-      "Siempre libre, siempre tú."
-    ]
-  },
-
-  // --- Categoría: Para Él 🥂 ---
-  {
-    id: 'festive_men',
-    name: 'Elegancia Oscura',
-    category: 'Para Él 🥂',
-    bg: '#1e293b',
-    textColor: '#fbbf24',
-    cardBg: 'rgba(15, 23, 42, 0.75)',
-    fontFamily: '"Times New Roman", serif',
-    floatingEmoji: '🥂',
-    presets: [
-      "A un hombre de principios, fuerza y gran corazón. ¡Que tengas un día excelente!",
-      "Hoy brindamos por tus éxitos pasados y por todos los que están por venir. ¡Felicidades!",
-      "Por tu esfuerzo, dedicación y ser un gran ejemplo. ¡Disfruta muchísimo de tu día!"
+    "id": "theme_13",
+    "name": "Elegante 13",
+    "category": "Amor ❤️",
+    "bg": "#1e293b",
+    "textColor": "#c084fc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "✨",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'men_wood',
-    name: 'Madera y Roble',
-    category: 'Para Él 🥂',
-    bg: 'linear-gradient(135deg, #78350f 0%, #451a03 100%)',
-    textColor: '#fcd34d',
-    cardBg: 'rgba(0,0,0,0.5)',
-    fontFamily: '"Outfit", sans-serif',
-    floatingEmoji: '🌲',
-    presets: [
-      "Fuerte, resiliente y siempre dispuesto a ayudar.",
-      "Que la vida te siga premiando por todo lo que trabajas.",
-      "Eres un roble en el que todos podemos apoyarnos."
+    "id": "theme_14",
+    "name": "Naturaleza 14",
+    "category": "Amor ❤️",
+    "bg": "#fdf4ff",
+    "textColor": "#78350f",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🧸",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'men_sport',
-    name: 'Mente Deportiva',
-    category: 'Para Él 🥂',
-    bg: '#064e3b',
-    textColor: '#fff',
-    cardBg: 'rgba(255,255,255,0.1)',
-    fontFamily: '"Inter", sans-serif',
-    floatingEmoji: '🏆',
-    presets: [
-      "Siempre buscando el próximo desafío. ¡Eres un campeón!",
-      "Que no falten las victorias en este nuevo año.",
-      "Sigue rompiendo tus propios récords."
+    "id": "theme_15",
+    "name": "Pastel 15",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to top, #c471f5 0%, #fa71cd 100%)",
+    "textColor": "#c084fc",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "🍓",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   },
   {
-    id: 'men_steel',
-    name: 'Acero Inoxidable',
-    category: 'Para Él 🥂',
-    bg: 'linear-gradient(to right, #9ca3af 0%, #4b5563 100%)',
-    textColor: '#111827',
-    cardBg: 'rgba(255,255,255,0.8)',
-    fontFamily: 'monospace',
-    floatingEmoji: '⚙️',
-    presets: [
-      "Para un hombre que soluciona, crea y construye. ¡Felicidades!",
-      "Tu determinación de acero es admirable.",
-      "Nada te detiene cuando tienes una meta."
+    "id": "theme_16",
+    "name": "Neón 16",
+    "category": "Amor ❤️",
+    "bg": "#000000",
+    "textColor": "#34d399",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🍒",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_17",
+    "name": "Naturaleza 17",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to right, #868f96 0%, #596164 100%)",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "🍷",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_18",
+    "name": "Naturaleza 18",
+    "category": "Amor ❤️",
+    "bg": "#064e3b",
+    "textColor": "#111827",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "🥂",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_19",
+    "name": "Elegante 19",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🦢",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_20",
+    "name": "Elegante 20",
+    "category": "Amor ❤️",
+    "bg": "linear-gradient(to right, #f83600 0%, #f9d423 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🎀",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_21",
+    "name": "Moderno 1",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #434343 0%, #000000 100%)",
+    "textColor": "#fee2e2",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🤝",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_22",
+    "name": "Moderno 2",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #868f96 0%, #596164 100%)",
+    "textColor": "#c084fc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "✌️",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_23",
+    "name": "Moderno 3",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to top, #09203f 0%, #537895 100%)",
+    "textColor": "#ffffff",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🤪",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_24",
+    "name": "Artístico 4",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "😎",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_25",
+    "name": "Divertido 5",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+    "textColor": "#7f1d1d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "🍻",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_26",
+    "name": "Minimalista 6",
+    "category": "Amistad 🤝",
+    "bg": "radial-gradient(circle, #2e1065 0%, #000000 100%)",
+    "textColor": "#fcd34d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Courier New\", monospace",
+    "floatingEmoji": "🍕",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_27",
+    "name": "Divertido 7",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    "textColor": "#000000",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🎮",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_28",
+    "name": "Pastel 8",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to top, #0ba360 0%, #3cba92 100%)",
+    "textColor": "#7f1d1d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "🚀",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_29",
+    "name": "Divertido 9",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+    "textColor": "#1e3a8a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "🌟",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_30",
+    "name": "Artístico 10",
+    "category": "Amistad 🤝",
+    "bg": "#451a03",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "🌻",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_31",
+    "name": "Moderno 11",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to top, #0ba360 0%, #3cba92 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "⚡",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_32",
+    "name": "Neón 12",
+    "category": "Amistad 🤝",
+    "bg": "#451a03",
+    "textColor": "#ffffff",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🔥",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_33",
+    "name": "Naturaleza 13",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to top, #c471f5 0%, #fa71cd 100%)",
+    "textColor": "#fcd34d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🎈",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_34",
+    "name": "Naturaleza 14",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)",
+    "textColor": "#fbbf24",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🎉",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_35",
+    "name": "Pastel 15",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #434343 0%, #000000 100%)",
+    "textColor": "#1e3a8a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "💪",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_36",
+    "name": "Naturaleza 16",
+    "category": "Amistad 🤝",
+    "bg": "#09090b",
+    "textColor": "#000000",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "👽",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_37",
+    "name": "Divertido 17",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #868f96 0%, #596164 100%)",
+    "textColor": "#fcd34d",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "👻",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_38",
+    "name": "Naturaleza 18",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "🤠",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_39",
+    "name": "Artístico 19",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #f6d365 0%, #fda085 100%)",
+    "textColor": "#fef3c7",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🤩",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_40",
+    "name": "Retro 20",
+    "category": "Amistad 🤝",
+    "bg": "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "🤙",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_41",
+    "name": "Retro 1",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(135deg, #78350f 0%, #451a03 100%)",
+    "textColor": "#fcd34d",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "🎂",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_42",
+    "name": "Elegante 2",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "🎈",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_43",
+    "name": "Elegante 3",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to top, #0ba360 0%, #3cba92 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "🎉",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_44",
+    "name": "Minimalista 4",
+    "category": "Cumpleaños 🎂",
+    "bg": "radial-gradient(circle at top right, #310e68 0%, #5f0f40 100%)",
+    "textColor": "#78350f",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🎁",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_45",
+    "name": "Naturaleza 5",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to top, #0ba360 0%, #3cba92 100%)",
+    "textColor": "#ffffff",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🥳",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_46",
+    "name": "Neón 6",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+    "textColor": "#fee2e2",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "🎊",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_47",
+    "name": "Naturaleza 7",
+    "category": "Cumpleaños 🎂",
+    "bg": "#000000",
+    "textColor": "#78350f",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🍰",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_48",
+    "name": "Naturaleza 8",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
+    "textColor": "#ffb3c6",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🧁",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_49",
+    "name": "Elegante 9",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
+    "textColor": "#ffb3c6",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🍾",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_50",
+    "name": "Moderno 10",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to right, #f83600 0%, #f9d423 100%)",
+    "textColor": "#831843",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🥂",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_51",
+    "name": "Naturaleza 11",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%)",
+    "textColor": "#fbbf24",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "👑",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_52",
+    "name": "Artístico 12",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "🌟",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_53",
+    "name": "Oscuro 13",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to right, #434343 0%, #000000 100%)",
+    "textColor": "#111827",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Courier New\", monospace",
+    "floatingEmoji": "✨",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_54",
+    "name": "Pastel 14",
+    "category": "Cumpleaños 🎂",
+    "bg": "#fdf4ff",
+    "textColor": "#111827",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🔥",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_55",
+    "name": "Oscuro 15",
+    "category": "Cumpleaños 🎂",
+    "bg": "#f8fafc",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "💯",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_56",
+    "name": "Moderno 16",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to right, #f6d365 0%, #fda085 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Courier New\", monospace",
+    "floatingEmoji": "🙌",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_57",
+    "name": "Moderno 17",
+    "category": "Cumpleaños 🎂",
+    "bg": "#000000",
+    "textColor": "#fef3c7",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "🦄",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_58",
+    "name": "Moderno 18",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(to top, #09203f 0%, #537895 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🌈",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_59",
+    "name": "Divertido 19",
+    "category": "Cumpleaños 🎂",
+    "bg": "#fdf4ff",
+    "textColor": "#1e3a8a",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🍭",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_60",
+    "name": "Neón 20",
+    "category": "Cumpleaños 🎂",
+    "bg": "linear-gradient(135deg, #78350f 0%, #451a03 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🍹",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_61",
+    "name": "Artístico 1",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    "textColor": "#ffffff",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "✨",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_62",
+    "name": "Naturaleza 2",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
+    "textColor": "#fbbf24",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🌸",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_63",
+    "name": "Oscuro 3",
+    "category": "Para Ella ✨",
+    "bg": "#451a03",
+    "textColor": "#831843",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "🦋",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_64",
+    "name": "Neón 4",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)",
+    "textColor": "#4c1d95",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "💅",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_65",
+    "name": "Pastel 5",
+    "category": "Para Ella ✨",
+    "bg": "#fdf4ff",
+    "textColor": "#c084fc",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "👸",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_66",
+    "name": "Minimalista 6",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Courier New\", monospace",
+    "floatingEmoji": "👑",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_67",
+    "name": "Divertido 7",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #868f96 0%, #596164 100%)",
+    "textColor": "#78350f",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "💎",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_68",
+    "name": "Elegante 8",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #b224ef 0%, #7579ff 100%)",
+    "textColor": "#9d174d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "💄",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_69",
+    "name": "Naturaleza 9",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #868f96 0%, #596164 100%)",
+    "textColor": "#9d174d",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "👛",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_70",
+    "name": "Oscuro 10",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #9ca3af 0%, #4b5563 100%)",
+    "textColor": "#1e3a8a",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "👠",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_71",
+    "name": "Naturaleza 11",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)",
+    "textColor": "#fee2e2",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🍷",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_72",
+    "name": "Retro 12",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #434343 0%, #000000 100%)",
+    "textColor": "#fbbf24",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "🥂",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_73",
+    "name": "Pastel 13",
+    "category": "Para Ella ✨",
+    "bg": "radial-gradient(circle at top right, #310e68 0%, #5f0f40 100%)",
+    "textColor": "#000000",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "🌷",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_74",
+    "name": "Retro 14",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+    "textColor": "#fbbf24",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🌹",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_75",
+    "name": "Elegante 15",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #868f96 0%, #596164 100%)",
+    "textColor": "#fee2e2",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Courier New\", monospace",
+    "floatingEmoji": "🌺",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_76",
+    "name": "Pastel 16",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
+    "textColor": "#34d399",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "💖",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_77",
+    "name": "Divertido 17",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🥰",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_78",
+    "name": "Moderno 18",
+    "category": "Para Ella ✨",
+    "bg": "#09090b",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🌙",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_79",
+    "name": "Divertido 19",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #ff758c 0%, #ff7eb3 100%)",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "⭐",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_80",
+    "name": "Retro 20",
+    "category": "Para Ella ✨",
+    "bg": "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
+    "textColor": "#ffb3c6",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🎀",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_81",
+    "name": "Divertido 1",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(135deg, #78350f 0%, #451a03 100%)",
+    "textColor": "#111827",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🥂",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_82",
+    "name": "Elegante 2",
+    "category": "Para Él 🥂",
+    "bg": "#fdf4ff",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Georgia\", serif",
+    "floatingEmoji": "💼",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_83",
+    "name": "Elegante 3",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Inter\", sans-serif",
+    "floatingEmoji": "👔",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_84",
+    "name": "Neón 4",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "⌚",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_85",
+    "name": "Neón 5",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    "textColor": "#000000",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "💪",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_86",
+    "name": "Retro 6",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%)",
+    "textColor": "#34d399",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🏋️‍♂️",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_87",
+    "name": "Moderno 7",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🏎️",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_88",
+    "name": "Artístico 8",
+    "category": "Para Él 🥂",
+    "bg": "#09090b",
+    "textColor": "#064e3b",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "🎮",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_89",
+    "name": "Retro 9",
+    "category": "Para Él 🥂",
+    "bg": "radial-gradient(circle, #2e1065 0%, #000000 100%)",
+    "textColor": "#111827",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🍺",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_90",
+    "name": "Minimalista 10",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(to right, #b224ef 0%, #7579ff 100%)",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "🥃",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_91",
+    "name": "Neón 11",
+    "category": "Para Él 🥂",
+    "bg": "#09090b",
+    "textColor": "#ffb3c6",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Times New Roman\", serif",
+    "floatingEmoji": "😎",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_92",
+    "name": "Artístico 12",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(to right, #f83600 0%, #f9d423 100%)",
+    "textColor": "#1e3a8a",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Comic Sans MS\", cursive",
+    "floatingEmoji": "👑",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_93",
+    "name": "Retro 13",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(to right, #b224ef 0%, #7579ff 100%)",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Arial\", sans-serif",
+    "floatingEmoji": "🔥",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_94",
+    "name": "Neón 14",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+    "textColor": "#0f172a",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "⚡",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_95",
+    "name": "Naturaleza 15",
+    "category": "Para Él 🥂",
+    "bg": "#064e3b",
+    "textColor": "#fbbf24",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Playfair Display\", serif",
+    "floatingEmoji": "🚀",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_96",
+    "name": "Artístico 16",
+    "category": "Para Él 🥂",
+    "bg": "#000000",
+    "textColor": "#fef3c7",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Outfit\", sans-serif",
+    "floatingEmoji": "🛠️",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_97",
+    "name": "Pastel 17",
+    "category": "Para Él 🥂",
+    "bg": "#fdf4ff",
+    "textColor": "#f0abfc",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "\"Courier New\", monospace",
+    "floatingEmoji": "⚽",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_98",
+    "name": "Moderno 18",
+    "category": "Para Él 🥂",
+    "bg": "linear-gradient(135deg, #78350f 0%, #451a03 100%)",
+    "textColor": "#fef3c7",
+    "cardBg": "rgba(0, 0, 0, 0.7)",
+    "fontFamily": "monospace",
+    "floatingEmoji": "🏀",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_99",
+    "name": "Moderno 19",
+    "category": "Para Él 🥂",
+    "bg": "radial-gradient(circle at top right, #310e68 0%, #5f0f40 100%)",
+    "textColor": "#fef3c7",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "🎸",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
+    ]
+  },
+  {
+    "id": "theme_100",
+    "name": "Oscuro 20",
+    "category": "Para Él 🥂",
+    "bg": "#fdf4ff",
+    "textColor": "#7f1d1d",
+    "cardBg": "rgba(255, 255, 255, 0.7)",
+    "fontFamily": "\"Impact\", sans-serif",
+    "floatingEmoji": "🏍️",
+    "presets": [
+      "Un mensaje de ejemplo lleno de buena vibra y energía positiva para ti.",
+      "Este es un diseño generado dinámicamente para darte más opciones de personalización.",
+      "¡Recuerda que puedes cambiar este texto en el creador por lo que tú quieras!"
     ]
   }
 ];
