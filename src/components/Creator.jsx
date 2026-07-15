@@ -74,6 +74,9 @@ export default function Creator({ themeId, onBack }) {
           <label>Formato Mágico</label>
           <select name="layoutId" value={formData.layoutId} onChange={handleChange}>
             <option value="envelope_3d">Sobre Mágico 3D (Animado)</option>
+            <option value="wrapped_story">Historia Tap-to-Read (TikTok Vibe)</option>
+            <option value="mystery_box">Caja Regalo Sorpresa</option>
+            <option value="vip_ticket">Boleto VIP Dorado</option>
             <option value="center_card">Tarjeta Clásica (Directa)</option>
           </select>
         </div>

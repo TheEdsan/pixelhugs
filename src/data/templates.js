@@ -83,5 +83,8 @@ export const themes = [
 
 export const layouts = [
   { id: 'envelope_3d', name: 'Sobre Mágico 3D' },
+  { id: 'wrapped_story', name: 'Historia Tap-to-Read (TikTok)' },
+  { id: 'mystery_box', name: 'Caja Regalo Sorpresa' },
+  { id: 'vip_ticket', name: 'Boleto VIP Dorado' },
   { id: 'center_card', name: 'Tarjeta Clásica' }
 ];

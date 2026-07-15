@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { themes } from '../data/templates';
 import Envelope from './Envelope';
+import WrappedStory from './WrappedStory';
+import MysteryBox from './MysteryBox';
+import VipTicket from './VipTicket';
 
 export default function Viewer({ data, isPreview = false }) {
   const [showEmojis, setShowEmojis] = useState([]);
   
   const theme = themes.find(t => t.id === data.themeId) || themes[0];
-  const isEnvelope = data.layoutId === 'envelope_3d';
+  const layout = data.layoutId;
 
   useEffect(() => {
     const emojis = Array.from({ length: isPreview ? 10 : 20 }).map((_, i) => ({
@@ -49,11 +52,11 @@ export default function Viewer({ data, isPreview = false }) {
 
   const innerContent = (
     <>
-      <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 'bold' }}>
+      <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 'bold', fontFamily: 'var(--font-elegant)', fontStyle: 'italic' }}>
         Para: {data.toName || '...'}
       </h2>
       
-      <p style={{ fontSize: '1.2rem', whiteSpace: 'pre-wrap', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+      <p style={{ fontSize: '1.2rem', whiteSpace: 'pre-wrap', lineHeight: '1.6', marginBottom: '1.5rem', fontWeight: '300' }}>
         {data.message || 'Tu hermoso mensaje aparecerá aquí...'}
       </p>
 
@@ -65,9 +68,45 @@ export default function Viewer({ data, isPreview = false }) {
     </>
   );
 
+  const renderLayout = () => {
+    switch(layout) {
+      case 'envelope_3d':
+        return (
+          <Envelope isPreview={isPreview}>
+            <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>{innerContent}</div>
+          </Envelope>
+        );
+      case 'wrapped_story':
+        return (
+          <WrappedStory isPreview={isPreview}>
+            <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>{innerContent}</div>
+          </WrappedStory>
+        );
+      case 'mystery_box':
+        return (
+          <MysteryBox isPreview={isPreview}>
+            <div style={cardStyle} className="animate-pop-in">{innerContent}</div>
+          </MysteryBox>
+        );
+      case 'vip_ticket':
+        return (
+          <VipTicket isPreview={isPreview}>
+            <div style={{ textAlign: 'center', width: '100%', height: '100%', color: '#fff' }}>{innerContent}</div>
+          </VipTicket>
+        );
+      default:
+        return (
+          <div style={cardStyle} className="animate-pop-in">
+            {innerContent}
+          </div>
+        );
+    }
+  };
+
   return (
     <div style={containerStyle}>
-      {showEmojis.map(e => (
+      {/* Background Floating Emojis */}
+      {layout !== 'wrapped_story' && showEmojis.map(e => (
         <div key={e.id} className="floating-emoji" style={{
           left: e.left,
           animationDuration: e.animationDuration,
@@ -78,18 +117,10 @@ export default function Viewer({ data, isPreview = false }) {
         </div>
       ))}
 
-      {isEnvelope ? (
-        <Envelope isPreview={isPreview}>
-          <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>
-            {innerContent}
-          </div>
-        </Envelope>
-      ) : (
-        <div style={cardStyle} className="animate-pop-in">
-          {innerContent}
-        </div>
-      )}
+      {/* Main Interactive Layout */}
+      {renderLayout()}
 
+      {/* Footer "Create your own" link */}
       {!isPreview && (
         <div style={{ position: 'fixed', bottom: '15px', right: '15px', zIndex: 100 }}>
           <a href="/" style={{ 

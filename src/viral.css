@@ -1,0 +1,309 @@
+/* =========================================
+   VIRAL INTERACTIVE MODULES CSS
+========================================= */
+
+/* 1. Wrapped Story */
+.wrapped-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapped-progress {
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1010;
+}
+
+.progress-bar {
+  height: 4px;
+  flex: 1;
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar.active {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.wrapped-prev-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  z-index: 1005;
+}
+
+.wrapped-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapped-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.wrapped-title {
+  font-family: var(--font-elegant);
+  font-size: 3rem;
+  font-style: italic;
+  background: linear-gradient(135deg, #fecfef 0%, #ff9a9e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapped-title-big {
+  font-family: var(--font-modern);
+  font-weight: 800;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 40px rgba(255,255,255,0.5);
+}
+
+.wrapped-subtitle {
+  margin-top: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #a3a3a3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes slide-in-bottom {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(100px) scale(0.9); opacity: 0; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(0.5); opacity: 0; filter: blur(10px); }
+  100% { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+
+.slide-in-bottom { animation: slide-in-bottom 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.slide-in-right { animation: slide-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.zoom-in { animation: zoom-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+
+
+/* 2. Mystery Box */
+.mystery-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.mystery-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 100%);
+  border-radius: 10px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 0 40px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.box-lid {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 220px;
+  height: 40px;
+  background: linear-gradient(135deg, #e879f9 0%, #a78bfa 100%);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.box-ribbon-v {
+  position: absolute;
+  top: -20px;
+  left: 85px;
+  width: 30px;
+  height: 220px;
+  background: #fcd34d;
+  z-index: 3;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.box-ribbon-h {
+  position: absolute;
+  top: 85px;
+  left: -10px;
+  width: 220px;
+  height: 30px;
+  background: #fcd34d;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.box-hint {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-modern);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  animation: pulse 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(5deg) scale(1.05); }
+  50% { transform: rotate(0deg) scale(1.1); }
+  75% { transform: rotate(-5deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+.shake { animation: shake infinite; }
+
+.mystery-reveal {
+  position: relative;
+  z-index: 10;
+}
+
+.confetti-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  animation: explode 1s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes explode {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+  100% { transform: translate(-50%, -150%) scale(2); opacity: 0; }
+}
+
+/* 3. VIP Ticket */
+.vip-ticket-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.vip-ticket {
+  position: relative;
+  display: flex;
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,215,0,0.3);
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+}
+
+.ticket-left {
+  background: linear-gradient(to bottom, #d4af37, #aa7c11);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 2px dashed rgba(0,0,0,0.3);
+  width: 120px;
+}
+
+.ticket-logo {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-modern);
+  font-weight: 800;
+  font-size: 2rem;
+  color: #111;
+  letter-spacing: 5px;
+}
+
+.ticket-barcode {
+  font-family: monospace;
+  writing-mode: vertical-rl;
+  font-size: 1.5rem;
+  color: #111;
+  opacity: 0.6;
+}
+
+.ticket-right {
+  flex: 1;
+  padding: 3rem 2rem;
+  position: relative;
+  background: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(255,215,0,0.05)"/></svg>');
+}
+
+.ticket-content {
+  position: relative;
+  z-index: 2;
+}
+
+.ticket-hologram {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  animation: spin 5s linear infinite;
+}
+
+.notch {
+  position: absolute;
+  left: 110px;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.notch.top { top: -10px; box-shadow: inset 0 -2px 5px rgba(0,0,0,0.5); }
+.notch.bottom { bottom: -10px; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); }
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
