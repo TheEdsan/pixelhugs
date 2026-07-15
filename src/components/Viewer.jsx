@@ -41,7 +41,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
     color: theme.textColor,
     fontFamily: theme.fontFamily,
     minHeight: (isPreview || isEditor) ? '100%' : '100vh',
-    height: (isPreview || isEditor) ? '100%' : 'auto',
+    height: (isPreview || isEditor) ? '100%' : '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
