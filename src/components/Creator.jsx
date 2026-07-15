@@ -73,15 +73,31 @@ export default function Creator({ themeId, onBack }) {
         <div className="form-group">
           <label>Formato Mágico</label>
           <select name="layoutId" value={formData.layoutId} onChange={handleChange}>
-            <option value="envelope_3d">Sobre Mágico 3D (Animado)</option>
-            <option value="wrapped_story">Historia Tap-to-Read (TikTok Vibe)</option>
-            <option value="mystery_box">Caja Regalo Sorpresa</option>
-            <option value="vip_ticket">Boleto VIP Dorado</option>
-            <option value="runaway_button">El Botón Escurridizo (Tramposo)</option>
-            <option value="scratch_card">Tarjeta Raspa y Gana</option>
-            <option value="love_timer">Cronómetro de Amor</option>
-            <option value="pin_lock">Candado Secreto con PIN</option>
-            <option value="center_card">Tarjeta Clásica (Directa)</option>
+            <optgroup label="Básicos">
+              <option value="center_card">Tarjeta Clásica (Directa)</option>
+              <option value="envelope_3d">Sobre Mágico 3D (Animado)</option>
+            </optgroup>
+            <optgroup label="Experiencias Virales (TikTok)">
+              <option value="wrapped_story">Historia Tap-to-Read (TikTok Vibe)</option>
+              <option value="mystery_box">Caja Regalo Sorpresa</option>
+              <option value="runaway_button">El Botón Escurridizo (Tramposo)</option>
+              <option value="scratch_card">Tarjeta Raspa y Gana</option>
+              <option value="love_timer">Cronómetro de Amor</option>
+              <option value="pin_lock">Candado Secreto con PIN</option>
+            </optgroup>
+            <optgroup label="Nuevas Maravillas (Fase 3)">
+              <option value="constellation">Constelación Estelar</option>
+              <option value="music_box">Cajita Musical 3D</option>
+              <option value="sliding_puzzle">Rompecabezas Deslizante</option>
+              <option value="bottle_ocean">Mensaje en la Botella</option>
+              <option value="ghost_typewriter">Máquina de Escribir Fantasma</option>
+              <option value="travel_passport">Pasaporte de Viaje</option>
+              <option value="minesweeper">Buscaminas del Amor</option>
+              <option value="foggy_mirror">Espejo Empañado</option>
+              <option value="time_capsule">Cápsula del Tiempo</option>
+              <option value="tarot_reading">Lectura de Cartas del Destino</option>
+              <option value="vip_ticket">Boleto VIP Dorado</option>
+            </optgroup>
           </select>
         </div>
 
@@ -103,6 +119,13 @@ export default function Creator({ themeId, onBack }) {
           <div className="form-group animate-pop-in">
             <label>Código PIN (4 Dígitos)</label>
             <input type="text" name="pinCode" value={formData.pinCode || ''} onChange={handleChange} placeholder="Ej. 1402" maxLength={4} pattern="\d*" />
+          </div>
+        )}
+
+        {formData.layoutId === 'time_capsule' && (
+          <div className="form-group animate-pop-in">
+            <label>Fecha de Apertura (Cápsula)</label>
+            <input type="datetime-local" name="unlockDate" value={formData.unlockDate || ''} onChange={handleChange} />
           </div>
         )}
 

@@ -8,6 +8,16 @@ import RunawayButton from './RunawayButton';
 import ScratchCard from './ScratchCard';
 import LoveTimer from './LoveTimer';
 import PinLock from './PinLock';
+import Constellation from './Constellation';
+import MusicBox from './MusicBox';
+import SlidingPuzzle from './SlidingPuzzle';
+import BottleOcean from './BottleOcean';
+import GhostTypewriter from './GhostTypewriter';
+import TravelPassport from './TravelPassport';
+import Minesweeper from './Minesweeper';
+import FoggyMirror from './FoggyMirror';
+import TimeCapsule from './TimeCapsule';
+import TarotReading from './TarotReading';
 
 export default function Viewer({ data, isPreview = false }) {
   const [showEmojis, setShowEmojis] = useState([]);
@@ -121,6 +131,66 @@ export default function Viewer({ data, isPreview = false }) {
           <PinLock data={data} isPreview={isPreview}>
             <div style={cardStyle}>{innerContent}</div>
           </PinLock>
+        );
+      case 'constellation':
+        return (
+          <Constellation data={data} isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </Constellation>
+        );
+      case 'music_box':
+        return (
+          <MusicBox isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </MusicBox>
+        );
+      case 'sliding_puzzle':
+        return (
+          <SlidingPuzzle isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </SlidingPuzzle>
+        );
+      case 'bottle_ocean':
+        return (
+          <BottleOcean isPreview={isPreview}>
+            <div style={{ textAlign: 'center', padding: '1rem' }}>{innerContent}</div>
+          </BottleOcean>
+        );
+      case 'ghost_typewriter':
+        return (
+          <GhostTypewriter data={data} isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </GhostTypewriter>
+        );
+      case 'travel_passport':
+        return (
+          <TravelPassport data={data} isPreview={isPreview}>
+            <div style={{ textAlign: 'center' }}>{innerContent}</div>
+          </TravelPassport>
+        );
+      case 'minesweeper':
+        return (
+          <Minesweeper isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </Minesweeper>
+        );
+      case 'foggy_mirror':
+        return (
+          <FoggyMirror isPreview={isPreview}>
+            <div style={{ textAlign: 'center', padding: '1rem' }}>{innerContent}</div>
+          </FoggyMirror>
+        );
+      case 'time_capsule':
+        return (
+          <TimeCapsule data={data} isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </TimeCapsule>
+        );
+      case 'tarot_reading':
+        return (
+          <TarotReading isPreview={isPreview}>
+            <div style={{ textAlign: 'center', padding: '1rem', width: '100%' }}>{innerContent}</div>
+          </TarotReading>
         );
       default:
         return (

@@ -1,0 +1,187 @@
+/* =========================================
+   VIRAL INTERACTIVE MODULES CSS (PART 3)
+========================================= */
+
+/* 8. Constellation */
+.constellation-container {
+  width: 100vw; height: 100vh;
+  background: radial-gradient(circle at bottom, #1b2735 0%, #090a0f 100%);
+  position: absolute; top: 0; left: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+}
+.starfield { width: 100%; height: 100%; position: relative; }
+.star {
+  position: absolute; width: 6px; height: 6px; background: #fff; border-radius: 50%;
+  box-shadow: 0 0 10px #fff; cursor: pointer; transition: transform 0.2s;
+  animation: twinkle 3s infinite alternate;
+}
+.star:hover { transform: scale(2); }
+.star.active { background: #ffd700; box-shadow: 0 0 20px #ffd700; }
+.star-lines { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+.constellation-hint {
+  position: absolute; top: 20px; width: 100%; text-align: center; color: rgba(255,255,255,0.5);
+  font-family: var(--font-modern); letter-spacing: 2px; text-transform: uppercase;
+}
+.celestial-message { z-index: 10; text-align: center; position: relative; }
+.moon-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none; z-index: -1;
+}
+
+/* 9. Music Box */
+.music-box-container { text-align: center; }
+.music-box-closed {
+  width: 150px; height: 100px; background: linear-gradient(to bottom, #8b5a2b, #5c3a21);
+  margin: 0 auto; border-radius: 10px; position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 2px 5px rgba(255,255,255,0.2);
+}
+.crank {
+  position: absolute; right: -20px; top: 40px; width: 20px; height: 4px; background: silver;
+  transform-origin: left center; cursor: pointer; transition: transform 0.3s ease;
+}
+.crank::after { content: ''; position: absolute; right: 0; top: -10px; width: 10px; height: 24px; background: gold; border-radius: 5px; }
+.music-hint { color: #a3a3a3; font-size: 0.9rem; margin-bottom: 2rem; }
+.music-notes { font-size: 2rem; animation: floatUp 2s infinite; margin-bottom: 1rem; }
+@keyframes floatUp { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-50px); opacity: 0; } }
+
+/* 10. Sliding Puzzle */
+.puzzle-container { display: flex; flex-direction: column; align-items: center; }
+.puzzle-hint { color: #a3a3a3; margin-bottom: 1rem; }
+.puzzle-grid {
+  display: grid; grid-template-columns: repeat(3, 80px); grid-template-rows: repeat(3, 80px);
+  gap: 5px; background: #222; padding: 10px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.puzzle-tile {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; font-size: 1.5rem; font-weight: bold;
+  display: flex; align-items: center; justify-content: center; border-radius: 5px; cursor: pointer;
+  transition: transform 0.2s, filter 0.2s; box-shadow: inset 0 2px 5px rgba(255,255,255,0.2);
+}
+.puzzle-tile:hover:not(.empty) { filter: brightness(1.2); }
+.puzzle-tile.empty { background: transparent; box-shadow: none; cursor: default; }
+.puzzle-solved { background: #111; padding: 2rem; border-radius: 20px; text-align: center; }
+
+/* 11. Bottle Ocean */
+.ocean-container {
+  width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1000;
+  background: linear-gradient(to bottom, #87ceeb 0%, #1ca3ec 50%, #0077be 100%);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.ocean-waves {
+  position: absolute; bottom: 0; left: 0; width: 200%; height: 200px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q 100 0 200 50 T 400 50 T 600 50 T 800 50 L 800 100 L 0 100 Z" fill="rgba(255,255,255,0.2)"/></svg>') repeat-x;
+  animation: wave 10s linear infinite;
+}
+.wave-2 { bottom: -20px; opacity: 0.5; animation-duration: 7s; animation-direction: reverse; }
+@keyframes wave { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.floating-bottle {
+  position: relative; width: 60px; height: 150px; background: rgba(255,255,255,0.3); border-radius: 10px 10px 30px 30px;
+  border: 2px solid rgba(255,255,255,0.5); cursor: pointer;
+  animation: bob 3s ease-in-out infinite alternate; z-index: 10; display: flex; justify-content: center; box-shadow: inset -5px -5px 10px rgba(0,0,0,0.2);
+}
+.bottle-cork { position: absolute; top: -15px; width: 20px; height: 20px; background: #8b5a2b; border-radius: 5px; }
+.bottle-scroll { position: absolute; bottom: 10px; width: 30px; height: 80px; background: #fdf5e6; border-radius: 5px; box-shadow: inset 2px 0 5px rgba(0,0,0,0.2); }
+.bottle-hint { position: absolute; bottom: -40px; white-space: nowrap; color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+@keyframes bob { 0% { transform: translateY(0) rotate(-5deg); } 100% { transform: translateY(-20px) rotate(5deg); } }
+.scroll-paper {
+  background: #fdf5e6; color: #333; padding: 3rem; border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  max-width: 500px; text-align: center; z-index: 20; position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+/* 12. Ghost Typewriter */
+.typewriter-container {
+  width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1000;
+  background: #050505; display: flex; align-items: center; justify-content: center;
+}
+.candle-light {
+  position: absolute; top: 20%; left: 20%; width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.15) 0%, transparent 60%);
+  animation: flicker 3s infinite; pointer-events: none;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  25%, 75% { opacity: 0.9; }
+}
+.typewriter-paper {
+  background: #eae2cc; padding: 4rem 3rem; width: 90%; max-width: 600px; min-height: 400px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8); border-radius: 2px; color: #111;
+  font-family: 'Courier New', Courier, monospace; position: relative;
+}
+.typewriter-to { font-size: 1.5rem; margin-bottom: 2rem; font-weight: bold; }
+.typewriter-text { font-size: 1.2rem; line-height: 1.8; white-space: pre-wrap; }
+.cursor { animation: blink 1s infinite; font-weight: bold; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.typewriter-from { margin-top: 3rem; text-align: right; font-style: italic; font-size: 1.2rem; }
+
+/* 13. Travel Passport */
+.passport-container { display: flex; justify-content: center; perspective: 1000px; }
+.passport-book {
+  display: flex; width: 600px; background: #f4ecd8; border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 50px rgba(0,0,0,0.05);
+  position: relative; overflow: hidden;
+}
+.passport-left, .passport-right { flex: 1; padding: 2rem; position: relative; color: #333; }
+.passport-left { border-right: 2px solid rgba(0,0,0,0.1); background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="10"/></svg>') center center; }
+.passport-photo-placeholder { width: 100px; height: 130px; border: 2px dashed #999; margin-bottom: 1rem; border-radius: 5px; }
+.passport-details p { font-family: monospace; font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; }
+.passport-message { font-family: 'Playfair Display', serif; font-size: 1.2rem; line-height: 1.6; }
+.passport-stamp {
+  position: absolute; border: 3px solid; border-radius: 50%; width: 120px; height: 120px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-family: monospace; font-weight: bold; font-size: 1.2rem; transform: rotate(-20deg);
+  opacity: 0.6; mix-blend-mode: multiply; pointer-events: none;
+}
+.stamp-1 { color: #dc2626; border-color: #dc2626; bottom: 20px; right: -20px; }
+.stamp-2 { color: #2563eb; border-color: #2563eb; top: 20px; right: 20px; transform: rotate(15deg); }
+
+/* 14. Minesweeper */
+.minesweeper-container { text-align: center; }
+.minesweeper-hint { color: #a3a3a3; margin-bottom: 1rem; font-size: 0.9rem; }
+.minesweeper-grid {
+  display: grid; grid-template-columns: repeat(4, 60px); gap: 5px;
+  background: #222; padding: 10px; border-radius: 10px; margin: 0 auto;
+}
+.mine-cell {
+  width: 60px; height: 60px; background: #444; border-radius: 5px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+  box-shadow: inset 2px 2px 5px rgba(255,255,255,0.2), inset -2px -2px 5px rgba(0,0,0,0.5);
+  transition: all 0.2s;
+}
+.mine-cell:hover:not(.revealed) { background: #555; }
+.mine-cell.revealed { background: #333; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); cursor: default; }
+.mine-cell.exploded { background: #ef4444; animation: shake 0.5s; }
+.btn-retry { margin-top: 1rem; background: #ef4444; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; }
+
+/* 15. Foggy Mirror */
+/* Handled mostly in JS with Canvas, using minimal CSS for wrapper */
+.foggy-container { box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+
+/* 16. Time Capsule */
+.capsule-container { text-align: center; padding: 3rem; background: rgba(0,0,0,0.5); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+.capsule-icon { font-size: 4rem; margin-bottom: 1rem; }
+.capsule-container h2 { font-family: var(--font-modern); margin-bottom: 1rem; }
+.capsule-container p { color: #a3a3a3; margin-bottom: 2rem; }
+.capsule-timer { font-size: 1.5rem; background: rgba(255,255,255,0.1); padding: 1rem 2rem; border-radius: 10px; display: inline-block; }
+
+/* 17. Tarot */
+.tarot-container { text-align: center; }
+.tarot-hint { color: #a3a3a3; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px; }
+.tarot-cards { display: flex; gap: 2rem; justify-content: center; }
+.tarot-card {
+  width: 120px; height: 200px; perspective: 1000px; cursor: pointer;
+}
+.tarot-card-inner {
+  position: relative; width: 100%; height: 100%; transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.tarot-card.flipped .tarot-card-inner { transform: rotateY(180deg); }
+.tarot-card-front, .tarot-card-back {
+  position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); font-family: var(--font-elegant);
+}
+.tarot-card-front { background: linear-gradient(135deg, #1e1b4b, #312e81); border: 2px solid #818cf8; font-size: 3rem; }
+.tarot-card-back { background: #fdf5e6; color: #111; transform: rotateY(180deg); border: 2px solid #d4af37; font-size: 1.2rem; font-style: italic; }
+.tarot-final { margin-top: 3rem; background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 20px; }
