@@ -4,6 +4,10 @@ import Envelope from './Envelope';
 import WrappedStory from './WrappedStory';
 import MysteryBox from './MysteryBox';
 import VipTicket from './VipTicket';
+import RunawayButton from './RunawayButton';
+import ScratchCard from './ScratchCard';
+import LoveTimer from './LoveTimer';
+import PinLock from './PinLock';
 
 export default function Viewer({ data, isPreview = false }) {
   const [showEmojis, setShowEmojis] = useState([]);
@@ -93,6 +97,30 @@ export default function Viewer({ data, isPreview = false }) {
           <VipTicket isPreview={isPreview}>
             <div style={{ textAlign: 'center', width: '100%', height: '100%', color: '#fff' }}>{innerContent}</div>
           </VipTicket>
+        );
+      case 'runaway_button':
+        return (
+          <RunawayButton data={data} isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </RunawayButton>
+        );
+      case 'scratch_card':
+        return (
+          <ScratchCard isPreview={isPreview}>
+            <div style={{ textAlign: 'center', padding: '1rem' }}>{innerContent}</div>
+          </ScratchCard>
+        );
+      case 'love_timer':
+        return (
+          <LoveTimer data={data}>
+            {innerContent}
+          </LoveTimer>
+        );
+      case 'pin_lock':
+        return (
+          <PinLock data={data} isPreview={isPreview}>
+            <div style={cardStyle}>{innerContent}</div>
+          </PinLock>
         );
       default:
         return (

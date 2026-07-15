@@ -77,9 +77,34 @@ export default function Creator({ themeId, onBack }) {
             <option value="wrapped_story">Historia Tap-to-Read (TikTok Vibe)</option>
             <option value="mystery_box">Caja Regalo Sorpresa</option>
             <option value="vip_ticket">Boleto VIP Dorado</option>
+            <option value="runaway_button">El Botón Escurridizo (Tramposo)</option>
+            <option value="scratch_card">Tarjeta Raspa y Gana</option>
+            <option value="love_timer">Cronómetro de Amor</option>
+            <option value="pin_lock">Candado Secreto con PIN</option>
             <option value="center_card">Tarjeta Clásica (Directa)</option>
           </select>
         </div>
+
+        {formData.layoutId === 'runaway_button' && (
+          <div className="form-group animate-pop-in">
+            <label>Pregunta para el botón "No"</label>
+            <input type="text" name="question" value={formData.question || ''} onChange={handleChange} placeholder="Ej. ¿Me perdonas?" maxLength={60} />
+          </div>
+        )}
+
+        {formData.layoutId === 'love_timer' && (
+          <div className="form-group animate-pop-in">
+            <label>Fecha de Inicio (Aniversario)</label>
+            <input type="date" name="startDate" value={formData.startDate || ''} onChange={handleChange} />
+          </div>
+        )}
+
+        {formData.layoutId === 'pin_lock' && (
+          <div className="form-group animate-pop-in">
+            <label>Código PIN (4 Dígitos)</label>
+            <input type="text" name="pinCode" value={formData.pinCode || ''} onChange={handleChange} placeholder="Ej. 1402" maxLength={4} pattern="\d*" />
+          </div>
+        )}
 
         <button className="btn-primary" onClick={handleGenerate}>✨ Crear Enlace Mágico</button>
 
