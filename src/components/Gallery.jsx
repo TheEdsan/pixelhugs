@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { themes } from '../data/templates';
 import LiveThumbnail from './LiveThumbnail';
 
 export default function Gallery({ onSelectTheme }) {
-  // Group themes by category
-  const categories = themes.reduce((acc, theme) => {
-    if (!acc[theme.category]) acc[theme.category] = [];
-    acc[theme.category].push(theme);
-    return acc;
-  }, {});
+  const [activeCategory, setActiveCategory] = useState('Todos');
+
+  // Extract unique categories
+  const categories = ['Todos', ...new Set(themes.map(t => t.category))];
+
+  const filteredThemes = activeCategory === 'Todos' 
+    ? themes 
+    : themes.filter(t => t.category === activeCategory);
 
   const scrollToGallery = (e) => {
     e.preventDefault();
@@ -78,26 +80,44 @@ export default function Gallery({ onSelectTheme }) {
       {/* The Gallery */}
       <section id="gallery" className="gallery-section">
         <h2 className="section-title">Elige tu Plantilla Base</h2>
-        <div className="gallery-content">
-          {Object.keys(categories).map(category => (
-            <div key={category} className="category-section">
-              <h2 className="category-title">{category}</h2>
-              <div className="theme-grid">
-                {categories[category].map(theme => (
-                  <div key={theme.id} className="theme-card" onClick={() => onSelectTheme(theme.id)}>
-                    <LiveThumbnail themeId={theme.id} />
-                    <div className="theme-overlay">
-                      <button className="btn-select">Usar Plantilla</button>
-                    </div>
-                    <div className="theme-info">
-                      <h3>{theme.name}</h3>
-                      <span className="theme-badge">Interactive</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        
+        {/* Category Tabs */}
+        <div className="category-tabs" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
+          {categories.map(cat => (
+            <button 
+              key={cat} 
+              onClick={() => setActiveCategory(cat)}
+              style={{
+                padding: '0.5rem 1.5rem',
+                borderRadius: '50px',
+                background: activeCategory === cat ? '#fff' : 'rgba(255,255,255,0.1)',
+                color: activeCategory === cat ? '#000' : '#fff',
+                border: 'none',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                transition: 'all 0.3s'
+              }}
+            >
+              {cat}
+            </button>
           ))}
+        </div>
+
+        <div className="gallery-content">
+          <div className="theme-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+            {filteredThemes.map(theme => (
+              <div key={theme.id} className="theme-card" onClick={() => onSelectTheme(theme.id)}>
+                <LiveThumbnail themeId={theme.id} />
+                <div className="theme-overlay">
+                  <button className="btn-select">Usar Plantilla</button>
+                </div>
+                <div className="theme-info">
+                  <h3>{theme.name}</h3>
+                  <span className="theme-badge">Interactive</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
