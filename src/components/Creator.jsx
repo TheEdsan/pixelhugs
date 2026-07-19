@@ -32,10 +32,10 @@ export default function Creator({ themeId, onBack }) {
     if (!formData.toName || !formData.message) return alert('Por favor, ingresa para quién es y el mensaje.');
     const base64 = encodeData(formData);
     
-    if (isPremium) {
+    // Si es premium y NO tiene el cupón mágico
+    if (isPremium && formData.coupon !== 'PIXELHUGS') {
       // Flujo Premium: Mercado Pago
       try {
-        // Guardamos la carta temporalmente en el navegador antes de ir a pagar
         localStorage.setItem('pending_card', base64);
         
         const successLink = `${window.location.origin}${window.location.pathname}?payment_success=true`;
@@ -52,7 +52,7 @@ export default function Creator({ themeId, onBack }) {
         
         const data = await res.json();
         if (data.init_point) {
-          window.location.href = data.init_point; // Redirigir a Mercado Pago
+          window.location.href = data.init_point;
         } else {
           alert('Error al iniciar el pago.');
         }
@@ -61,7 +61,7 @@ export default function Creator({ themeId, onBack }) {
         alert('Error conectando con la pasarela de pagos. Asegúrate de tener configurada tu clave de Mercado Pago.');
       }
     } else {
-      // Flujo Gratis
+      // Flujo Gratis o VIP (con cupón)
       const link = `${window.location.origin}${window.location.pathname}?c=${base64}`;
       setGeneratedLink(link);
     }
@@ -169,8 +169,15 @@ export default function Creator({ themeId, onBack }) {
           </div>
         )}
 
+        {isPremium && (
+          <div className="form-group animate-pop-in">
+            <label>¿Tienes un cupón VIP?</label>
+            <input type="text" name="coupon" value={formData.coupon || ''} onChange={handleChange} placeholder="Ej. PIXELHUGS" maxLength={20} style={{ textTransform: 'uppercase' }} />
+          </div>
+        )}
+
         <button className="btn-primary" onClick={handleGenerate}>
-          {isPremium ? '💳 Pagar S/ 3.00 y Crear Enlace' : '✨ Crear Enlace Mágico'}
+          {isPremium && formData.coupon !== 'PIXELHUGS' ? '💳 Pagar S/ 3.00 y Crear Enlace' : '✨ Crear Enlace Mágico'}
         </button>
 
         {generatedLink && (
