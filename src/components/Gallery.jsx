@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { themes } from '../data/templates';
 import LiveThumbnail from './LiveThumbnail';
 import AdBanner from './AdBanner';
+import TipJarModal from './TipJarModal';
 
 export default function Gallery({ onSelectTheme }) {
   const [activeCategory, setActiveCategory] = useState('Todos');
+  const [showTipJar, setShowTipJar] = useState(false);
 
   // Extract unique categories
   const categories = ['Todos', ...new Set(themes.map(t => t.category))];
@@ -125,9 +127,24 @@ export default function Gallery({ onSelectTheme }) {
       {/* AdSense Banner */}
       <AdBanner slotId="gallery_bottom" />
 
+      {/* Tip Jar Floating Button */}
+      <button 
+        className="btn-floating-tip" 
+        onClick={() => setShowTipJar(true)}
+      >
+        ☕ Apóyanos
+      </button>
+
+      {showTipJar && <TipJarModal onClose={() => setShowTipJar(false)} />}
+
       {/* Footer */}
       <footer className="site-footer">
         <p>Hecho con ❤️ usando React y CSS puro. Zero base de datos.</p>
+        <div className="footer-links">
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); setShowTipJar(true); }}>Invítanos un café</a>
+        </div>
         <p style={{ marginTop: '0.5rem', opacity: 0.5 }}>PixelHugs © 2026</p>
       </footer>
     </div>
