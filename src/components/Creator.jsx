@@ -32,8 +32,8 @@ export default function Creator({ themeId, onBack }) {
     if (!formData.toName || !formData.message) return alert('Por favor, ingresa para quién es y el mensaje.');
     const base64 = encodeData(formData);
     
-    // Si es premium y NO tiene el cupón mágico
-    if (isPremium && formData.coupon !== 'PIXELHUGS') {
+    // Si es premium y NO tiene el cupón mágico (ignorando mayúsculas/minúsculas)
+    if (isPremium && (formData.coupon || '').toUpperCase() !== 'PIXELHUGS') {
       // Flujo Premium: Mercado Pago
       try {
         localStorage.setItem('pending_card', base64);
@@ -177,7 +177,7 @@ export default function Creator({ themeId, onBack }) {
         )}
 
         <button className="btn-primary" onClick={handleGenerate}>
-          {isPremium && formData.coupon !== 'PIXELHUGS' ? '💳 Pagar S/ 3.00 y Crear Enlace' : '✨ Crear Enlace Mágico'}
+          {isPremium && (formData.coupon || '').toUpperCase() !== 'PIXELHUGS' ? '💳 Pagar S/ 3.00 y Crear Enlace' : '✨ Crear Enlace Mágico'}
         </button>
 
         {generatedLink && (
