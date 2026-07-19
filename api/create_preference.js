@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     // IMPORTANTE: Reemplaza esto con tu ACCESS_TOKEN real de Mercado Pago (Perú)
     // Para producción usa process.env.MP_ACCESS_TOKEN
     const client = new MercadoPagoConfig({ 
-      accessToken: process.env.MP_ACCESS_TOKEN || 'TEST-0000000000000000-000000-00000000000000000000000000000000-000000000', 
+      accessToken: process.env.MP_ACCESS_TOKEN || 'APP_USR-7724511535037155-071823-7696e7ab43d1d1cf8141f2d0bcd0c3b2-300376346', 
       options: { timeout: 5000 } 
     });
 
