@@ -17,7 +17,7 @@ export default function TipJarModal({ onClose }) {
           <div className="tip-card yape-card">
             <h3>Yape o Plin 🇵🇪</h3>
             <div className="qr-placeholder" style={{ background: 'none' }}>
-              <img src="/yape-qr.png" alt="QR Yape" style={{ width: '150px', borderRadius: '12px' }} />
+              <img src="/yape-qr.jfif" alt="QR Yape" style={{ width: '150px', borderRadius: '12px' }} />
             </div>
             <p className="name-hint">A nombre de: Edu Santiago Pilares Quispe</p>
           </div>
