@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { themes } from '../data/templates';
 import LiveThumbnail from './LiveThumbnail';
+import AdBanner from './AdBanner';
 
 export default function Gallery({ onSelectTheme }) {
   const [activeCategory, setActiveCategory] = useState('Todos');
@@ -120,6 +121,9 @@ export default function Gallery({ onSelectTheme }) {
           </div>
         </div>
       </section>
+
+      {/* AdSense Banner */}
+      <AdBanner slotId="gallery_bottom" />
 
       {/* Footer */}
       <footer className="site-footer">

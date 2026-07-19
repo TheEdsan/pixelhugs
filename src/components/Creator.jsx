@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { encodeData } from '../utils/codec';
 import { themes } from '../data/templates';
 import Viewer from './Viewer';
+import TipJarModal from './TipJarModal';
 
 export default function Creator({ themeId, onBack }) {
   const theme = themes.find(t => t.id === themeId) || themes[0];
@@ -15,6 +16,7 @@ export default function Creator({ themeId, onBack }) {
   });
 
   const [generatedLink, setGeneratedLink] = useState('');
+  const [showTipJar, setShowTipJar] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,20 +26,58 @@ export default function Creator({ themeId, onBack }) {
     setFormData({ ...formData, message: msg });
   };
 
-  const handleGenerate = () => {
+  const isPremium = formData.layoutId !== 'center_card' && formData.layoutId !== 'envelope_3d';
+
+  const handleGenerate = async () => {
     if (!formData.toName || !formData.message) return alert('Por favor, ingresa para quién es y el mensaje.');
     const base64 = encodeData(formData);
-    const link = `${window.location.origin}${window.location.pathname}?c=${base64}`;
-    setGeneratedLink(link);
+    
+    if (isPremium) {
+      // Flujo Premium: Mercado Pago
+      try {
+        // Guardamos la carta temporalmente en el navegador antes de ir a pagar
+        localStorage.setItem('pending_card', base64);
+        
+        const successLink = `${window.location.origin}${window.location.pathname}?payment_success=true`;
+        const res = await fetch('/api/create_preference', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: 'Enlace Mágico Premium (PixelHugs)',
+            price: 3.00,
+            successUrl: successLink,
+            failureUrl: `${window.location.origin}${window.location.pathname}`
+          })
+        });
+        
+        const data = await res.json();
+        if (data.init_point) {
+          window.location.href = data.init_point; // Redirigir a Mercado Pago
+        } else {
+          alert('Error al iniciar el pago.');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Error conectando con la pasarela de pagos. Asegúrate de tener configurada tu clave de Mercado Pago.');
+      }
+    } else {
+      // Flujo Gratis
+      const link = `${window.location.origin}${window.location.pathname}?c=${base64}`;
+      setGeneratedLink(link);
+    }
   };
 
   const copyLink = () => {
     navigator.clipboard.writeText(generatedLink);
     alert('¡Enlace copiado! Envíalo por WhatsApp.');
+    // Show tip jar after they successfully copied the link
+    setTimeout(() => setShowTipJar(true), 1500);
   };
 
   return (
     <div className="editor-layout">
+      {showTipJar && <TipJarModal onClose={() => setShowTipJar(false)} />}
+      
       <div className="editor-sidebar">
         <button className="btn-back" onClick={onBack}>← Volver a la Galería</button>
         
@@ -73,30 +113,30 @@ export default function Creator({ themeId, onBack }) {
         <div className="form-group">
           <label>Formato Mágico</label>
           <select name="layoutId" value={formData.layoutId} onChange={handleChange}>
-            <optgroup label="Básicos">
+            <optgroup label="Básicos (Gratis)">
               <option value="center_card">Tarjeta Clásica (Directa)</option>
               <option value="envelope_3d">Sobre Mágico 3D (Animado)</option>
             </optgroup>
-            <optgroup label="Experiencias Virales (TikTok)">
-              <option value="wrapped_story">Historia Tap-to-Read (TikTok Vibe)</option>
-              <option value="mystery_box">Caja Regalo Sorpresa</option>
-              <option value="runaway_button">El Botón Escurridizo (Tramposo)</option>
-              <option value="scratch_card">Tarjeta Raspa y Gana</option>
-              <option value="love_timer">Cronómetro de Amor</option>
-              <option value="pin_lock">Candado Secreto con PIN</option>
+            <optgroup label="Experiencias Virales (Premium 👑)">
+              <option value="wrapped_story">Historia Tap-to-Read (👑 S/ 3.00)</option>
+              <option value="mystery_box">Caja Regalo Sorpresa (👑 S/ 3.00)</option>
+              <option value="runaway_button">El Botón Escurridizo (👑 S/ 3.00)</option>
+              <option value="scratch_card">Tarjeta Raspa y Gana (👑 S/ 3.00)</option>
+              <option value="love_timer">Cronómetro de Amor (👑 S/ 3.00)</option>
+              <option value="pin_lock">Candado Secreto con PIN (👑 S/ 3.00)</option>
             </optgroup>
-            <optgroup label="Nuevas Maravillas (Fase 3)">
-              <option value="constellation">Constelación Estelar</option>
-              <option value="music_box">Cajita Musical 3D</option>
-              <option value="sliding_puzzle">Rompecabezas Deslizante</option>
-              <option value="bottle_ocean">Mensaje en la Botella</option>
-              <option value="ghost_typewriter">Máquina de Escribir Fantasma</option>
-              <option value="travel_passport">Pasaporte de Viaje</option>
-              <option value="minesweeper">Buscaminas del Amor</option>
-              <option value="foggy_mirror">Espejo Empañado</option>
-              <option value="time_capsule">Cápsula del Tiempo</option>
-              <option value="tarot_reading">Lectura de Cartas del Destino</option>
-              <option value="vip_ticket">Boleto VIP Dorado</option>
+            <optgroup label="Nuevas Maravillas (Premium 👑)">
+              <option value="constellation">Constelación Estelar (👑 S/ 3.00)</option>
+              <option value="music_box">Cajita Musical 3D (👑 S/ 3.00)</option>
+              <option value="sliding_puzzle">Rompecabezas Deslizante (👑 S/ 3.00)</option>
+              <option value="bottle_ocean">Mensaje en la Botella (👑 S/ 3.00)</option>
+              <option value="ghost_typewriter">Máquina de Escribir Fantasma (👑 S/ 3.00)</option>
+              <option value="travel_passport">Pasaporte de Viaje (👑 S/ 3.00)</option>
+              <option value="minesweeper">Buscaminas del Amor (👑 S/ 3.00)</option>
+              <option value="foggy_mirror">Espejo Empañado (👑 S/ 3.00)</option>
+              <option value="time_capsule">Cápsula del Tiempo (👑 S/ 3.00)</option>
+              <option value="tarot_reading">Lectura de Cartas del Destino (👑 S/ 3.00)</option>
+              <option value="vip_ticket">Boleto VIP Dorado (👑 S/ 3.00)</option>
             </optgroup>
           </select>
         </div>
@@ -129,7 +169,9 @@ export default function Creator({ themeId, onBack }) {
           </div>
         )}
 
-        <button className="btn-primary" onClick={handleGenerate}>✨ Crear Enlace Mágico</button>
+        <button className="btn-primary" onClick={handleGenerate}>
+          {isPremium ? '💳 Pagar S/ 3.00 y Crear Enlace' : '✨ Crear Enlace Mágico'}
+        </button>
 
         {generatedLink && (
           <div className="result-box">
@@ -139,6 +181,9 @@ export default function Creator({ themeId, onBack }) {
               <button onClick={copyLink}>Copiar Enlace</button>
               <a href={generatedLink} target="_blank" rel="noreferrer">Ver Completa</a>
             </div>
+            <button className="btn-tip-jar" onClick={() => setShowTipJar(true)} style={{
+              width: '100%', marginTop: '1rem', background: '#a855f7', color: '#fff', border: 'none', padding: '1rem', borderRadius: '12px', cursor: 'pointer', fontWeight: 'bold'
+            }}>☕ Invítanos un Café (Yape/Plin)</button>
           </div>
         )}
       </div>

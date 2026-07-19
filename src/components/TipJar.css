@@ -1,0 +1,136 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content.tip-jar-modal {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 600px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: none; border: none;
+  color: #fff; font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.tip-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.tip-header h2 {
+  font-family: var(--font-elegant);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.tip-header p {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tip-options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tip-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tip-card h3 {
+  font-family: var(--font-modern);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.yape-card .qr-placeholder {
+  width: 150px; height: 150px;
+  background: #222;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.qr-hint {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #a855f7; /* Yape purple */
+  letter-spacing: 2px;
+}
+
+.name-hint {
+  font-size: 0.8rem;
+  color: #737373;
+  margin-top: 0.2rem;
+}
+
+.btn-paypal {
+  display: inline-block;
+  background: #0070ba;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-paypal:hover {
+  background: #005ea6;
+  transform: translateY(-2px);
+}
+
+.paypal-hint {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+}
+
+@media (max-width: 600px) {
+  .tip-options {
+    flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
