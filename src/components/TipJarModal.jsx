@@ -16,19 +16,17 @@ export default function TipJarModal({ onClose }) {
           {/* Yape / Plin Section */}
           <div className="tip-card yape-card">
             <h3>Yape o Plin 🇵🇪</h3>
-            <div className="qr-placeholder">
-              <img src="/qr-placeholder.png" alt="QR Yape" style={{ width: '150px', opacity: 0.5 }} />
-              <p className="qr-hint">(Coloca tu QR aquí)</p>
+            <div className="qr-placeholder" style={{ background: 'none' }}>
+              <img src="/yape-qr.png" alt="QR Yape" style={{ width: '150px', borderRadius: '12px' }} />
             </div>
-            <p className="phone-number">987 654 321</p>
-            <p className="name-hint">A nombre de: Creador de PixelHugs</p>
+            <p className="name-hint">A nombre de: Edu Santiago Pilares Quispe</p>
           </div>
 
           {/* PayPal Section */}
           <div className="tip-card paypal-card">
             <h3>Internacional 🌎</h3>
             <a 
-              href="https://paypal.me/tuusuario" 
+              href="https://paypal.me/edu210406" 
               target="_blank" 
               rel="noreferrer"
               className="btn-paypal"
