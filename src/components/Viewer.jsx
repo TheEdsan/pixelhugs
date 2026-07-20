@@ -80,7 +80,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
   };
 
   const innerContent = (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', minHeight: '150px' }}>
       <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 'bold', fontFamily: 'var(--font-elegant)', fontStyle: 'italic' }}>
         Para: {data.toName || '...'}
       </h2>
@@ -94,7 +94,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
           Con cariño,<br/><strong>{data.fromName}</strong>
         </div>
       )}
-    </>
+    </div>
   );
 
   const renderLayout = () => {
