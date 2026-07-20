@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function MusicBox({ children, isPreview = false }) {
+export default function MusicBox({ children, data, isPreview = false }) {
   const [isPlaying, setIsPlaying] = useState(isPreview);
   const [rotations, setRotations] = useState(0);
+
+  useEffect(() => {
+    if (data?.isDemo) {
+      const interval = setInterval(() => {
+        setRotations(r => {
+          if (r >= 5) {
+            setIsPlaying(true);
+            setTimeout(() => { setIsPlaying(false); setRotations(0); }, 2000);
+            return r;
+          }
+          return r + 1;
+        });
+      }, 500);
+      return () => clearInterval(interval);
+    }
+  }, [data?.isDemo]);
 
   const handleWind = () => {
     if (isPreview) return;

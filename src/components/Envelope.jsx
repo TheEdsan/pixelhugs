@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function Envelope({ children, isPreview = false }) {
+export default function Envelope({ children, data, isPreview = false }) {
   const [isOpen, setIsOpen] = useState(isPreview);
+
+  useEffect(() => {
+    if (data?.isDemo) {
+      const interval = setInterval(() => {
+        setIsOpen(o => !o);
+      }, 2000);
+      return () => clearInterval(interval);
+    }
+  }, [data?.isDemo]);
 
   const handleOpen = () => {
     if (!isPreview && !isOpen) {

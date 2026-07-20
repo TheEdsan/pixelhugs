@@ -4,7 +4,7 @@ import { themes } from '../data/templates';
 import Viewer from './Viewer';
 import TipJarModal from './TipJarModal';
 
-export default function Creator({ themeId, onBack }) {
+export default function Creator({ themeId, initialLayoutId, onBack }) {
   const theme = themes.find(t => t.id === themeId) || themes[0];
   
   const [formData, setFormData] = useState({
@@ -12,7 +12,7 @@ export default function Creator({ themeId, onBack }) {
     message: '',
     fromName: '',
     themeId: themeId,
-    layoutId: 'center_card'
+    layoutId: initialLayoutId || 'center_card'
   });
 
   const [generatedLink, setGeneratedLink] = useState('');

@@ -8,7 +8,13 @@ import './index.css';
 function App() {
   const [cardData, setCardData] = useState(null);
   const [selectedThemeId, setSelectedThemeId] = useState(null);
+  const [selectedLayoutId, setSelectedLayoutId] = useState(null);
   const [successLink, setSuccessLink] = useState(null);
+
+  const handleSelectTheme = (themeId, layoutId = null) => {
+    setSelectedThemeId(themeId);
+    setSelectedLayoutId(layoutId);
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -65,10 +71,10 @@ function App() {
   }
 
   if (selectedThemeId) {
-    return <Creator themeId={selectedThemeId} onBack={() => setSelectedThemeId(null)} />;
+    return <Creator themeId={selectedThemeId} initialLayoutId={selectedLayoutId} onBack={() => { setSelectedThemeId(null); setSelectedLayoutId(null); }} />;
   }
 
-  return <Gallery onSelectTheme={setSelectedThemeId} />;
+  return <Gallery onSelectTheme={handleSelectTheme} />;
 }
 
 export default App;

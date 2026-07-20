@@ -1,8 +1,22 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function RunawayButton({ children, data, isPreview = false }) {
   const [accepted, setAccepted] = useState(false);
   const noBtnRef = useRef(null);
+
+  useEffect(() => {
+    if (data?.isDemo) {
+      const interval = setInterval(() => {
+        const btn = noBtnRef.current;
+        if (btn) {
+          const x = Math.random() * 100 - 50;
+          const y = Math.random() * 100 - 50;
+          btn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+      }, 800);
+      return () => clearInterval(interval);
+    }
+  }, [data?.isDemo]);
 
   const handleNoHover = () => {
     if (isPreview) return;

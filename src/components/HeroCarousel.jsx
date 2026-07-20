@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Viewer from './Viewer';
 
-export default function HeroCarousel() {
+export default function HeroCarousel({ onSelectTheme }) {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -56,22 +56,35 @@ export default function HeroCarousel() {
             fromName: 'Creador',
             pinCode: '1234',
             question: '¿Te gusta esto?',
-            startDate: '2023-01-01'
+            startDate: '2023-01-01',
+            isDemo: true // Indicates to Viewer to hide create link and simulate interaction if possible
           };
 
           return (
-            <div key={item.id} className="carousel-card-live">
+            <div 
+              key={item.id} 
+              className="carousel-card-live" 
+              onClick={() => onSelectTheme && onSelectTheme(theme, item.id)}
+              style={{ cursor: 'pointer' }}
+            >
               <div className="card-badge">{item.badge}</div>
               
               <div className="live-preview-wrapper">
                 <div className="live-preview-content">
                   <Viewer data={mockData} isPreview={false} isEditor={true} />
                 </div>
+                {/* Overlay to intercept clicks and prevent interaction, keeping it as a pure preview */}
+                <div className="live-preview-overlay"></div>
               </div>
 
               <div className="card-info-live">
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
+                <button className="btn-try-format" style={{ 
+                  marginTop: '1rem', background: 'rgba(255,255,255,0.2)', border: 'none', 
+                  color: '#fff', padding: '0.5rem 1rem', borderRadius: '20px', 
+                  cursor: 'pointer', fontSize: '0.8rem', fontWeight: 'bold' 
+                }}>Crear con este formato ✨</button>
               </div>
             </div>
           );

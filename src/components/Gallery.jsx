@@ -60,7 +60,7 @@ export default function Gallery({ onSelectTheme }) {
       </section>
 
       {/* Hero Showcase Carousel (Moved down) */}
-      <HeroCarousel />
+      <HeroCarousel onSelectTheme={onSelectTheme} />
 
       {/* The Gallery */}
       <section id="gallery" className="gallery-section">

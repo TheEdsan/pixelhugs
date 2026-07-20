@@ -86,25 +86,25 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
     switch(layout) {
       case 'envelope_3d':
         return (
-          <Envelope isPreview={isPreview}>
+          <Envelope data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>{innerContent}</div>
           </Envelope>
         );
       case 'wrapped_story':
         return (
-          <WrappedStory isPreview={isPreview}>
+          <WrappedStory data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>{innerContent}</div>
           </WrappedStory>
         );
       case 'mystery_box':
         return (
-          <MysteryBox isPreview={isPreview}>
+          <MysteryBox data={data} isPreview={isPreview}>
             <div style={cardStyle} className="animate-pop-in">{innerContent}</div>
           </MysteryBox>
         );
       case 'vip_ticket':
         return (
-          <VipTicket isPreview={isPreview}>
+          <VipTicket data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', width: '100%', height: '100%', color: '#fff' }}>{innerContent}</div>
           </VipTicket>
         );
@@ -116,7 +116,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
         );
       case 'scratch_card':
         return (
-          <ScratchCard isPreview={isPreview}>
+          <ScratchCard data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', padding: '1rem' }}>{innerContent}</div>
           </ScratchCard>
         );
@@ -140,19 +140,19 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
         );
       case 'music_box':
         return (
-          <MusicBox isPreview={isPreview}>
+          <MusicBox data={data} isPreview={isPreview}>
             <div style={cardStyle}>{innerContent}</div>
           </MusicBox>
         );
       case 'sliding_puzzle':
         return (
-          <SlidingPuzzle isPreview={isPreview}>
+          <SlidingPuzzle data={data} isPreview={isPreview}>
             <div style={cardStyle}>{innerContent}</div>
           </SlidingPuzzle>
         );
       case 'bottle_ocean':
         return (
-          <BottleOcean isPreview={isPreview}>
+          <BottleOcean data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', padding: '1rem' }}>{innerContent}</div>
           </BottleOcean>
         );
@@ -170,13 +170,13 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
         );
       case 'minesweeper':
         return (
-          <Minesweeper isPreview={isPreview}>
+          <Minesweeper data={data} isPreview={isPreview}>
             <div style={cardStyle}>{innerContent}</div>
           </Minesweeper>
         );
       case 'foggy_mirror':
         return (
-          <FoggyMirror isPreview={isPreview}>
+          <FoggyMirror data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', padding: '1rem' }}>{innerContent}</div>
           </FoggyMirror>
         );
@@ -188,7 +188,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
         );
       case 'tarot_reading':
         return (
-          <TarotReading isPreview={isPreview}>
+          <TarotReading data={data} isPreview={isPreview}>
             <div style={{ textAlign: 'center', padding: '1rem', width: '100%' }}>{innerContent}</div>
           </TarotReading>
         );
@@ -219,7 +219,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
       {renderLayout()}
 
       {/* Footer "Create your own" link */}
-      {!isPreview && (
+      {!isPreview && !isEditor && !data.isDemo && (
         <div style={{ position: 'fixed', bottom: '15px', right: '15px', zIndex: 100 }}>
           <a href="/" style={{ 
             background: 'rgba(255,255,255,0.2)', 

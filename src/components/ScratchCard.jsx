@@ -34,16 +34,27 @@ export default function ScratchCard({ children, isPreview = false }) {
       ctx.fill();
 
       // Check scratched percentage (simplified check by picking random pixels)
-      const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
       let clear = 0;
       for (let i = 0; i < 500; i++) {
-        const randIndex = Math.floor(Math.random() * (data.length / 4)) * 4;
-        if (data[randIndex + 3] === 0) clear++;
+        const randIndex = Math.floor(Math.random() * (imageData.length / 4)) * 4;
+        if (imageData[randIndex + 3] === 0) clear++;
       }
       if (clear > 350) { // If roughly 70% scratched
         setIsScratched(true);
       }
     };
+
+    let demoInterval;
+    if (data?.isDemo) {
+      let angle = 0;
+      demoInterval = setInterval(() => {
+        angle += 0.5;
+        const x = 200 + Math.cos(angle) * 80;
+        const y = 150 + Math.sin(angle * 2) * 50;
+        scratch(x, y);
+      }, 50);
+    }
 
     const handleStart = (e) => {
       isDrawing = true;
@@ -68,6 +79,7 @@ export default function ScratchCard({ children, isPreview = false }) {
     canvas.addEventListener('touchend', handleEnd);
 
     return () => {
+      if (demoInterval) clearInterval(demoInterval);
       canvas.removeEventListener('mousedown', handleStart);
       canvas.removeEventListener('mousemove', handleMove);
       canvas.removeEventListener('mouseup', handleEnd);

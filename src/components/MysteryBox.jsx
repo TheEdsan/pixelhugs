@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function MysteryBox({ children, isPreview = false }) {
+export default function MysteryBox({ children, data, isPreview = false }) {
   const [clicks, setClicks] = useState(0);
   const clicksNeeded = isPreview ? 0 : 3;
+
+  useEffect(() => {
+    if (data?.isDemo) {
+      const interval = setInterval(() => {
+        setClicks(c => (c >= 3 ? 0 : c + 1));
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [data?.isDemo]);
 
   const handleClick = () => {
     if (clicks < clicksNeeded) {
