@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-export default function ScratchCard({ children, isPreview = false }) {
+export default function ScratchCard({ children, data, isPreview = false }) {
   const canvasRef = useRef(null);
   const [isScratched, setIsScratched] = useState(false);
 
