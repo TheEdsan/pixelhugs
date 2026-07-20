@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 
 export default function RunawayButton({ children, data, isPreview = false }) {
-  const [accepted, setAccepted] = useState(isPreview);
+  const [accepted, setAccepted] = useState(false);
   const noBtnRef = useRef(null);
 
   const handleNoHover = () => {

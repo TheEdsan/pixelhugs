@@ -2,10 +2,10 @@ import React, { useRef, useEffect, useState } from 'react';
 
 export default function ScratchCard({ children, isPreview = false }) {
   const canvasRef = useRef(null);
-  const [isScratched, setIsScratched] = useState(isPreview);
+  const [isScratched, setIsScratched] = useState(false);
 
   useEffect(() => {
-    if (isPreview || isScratched) return;
+    if (isScratched) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     
@@ -22,6 +22,8 @@ export default function ScratchCard({ children, isPreview = false }) {
     ctx.fillStyle = '#333';
     ctx.textAlign = 'center';
     ctx.fillText('¡Raspa aquí!', canvas.width / 2, canvas.height / 2);
+
+    if (isPreview) return; // Skip interactivity if it's a preview
 
     let isDrawing = false;
 

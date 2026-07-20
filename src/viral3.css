@@ -4,7 +4,7 @@
 
 /* 8. Constellation */
 .constellation-container {
-  width: 100vw; height: 100vh;
+  width: 100%; height: 100%;
   background: radial-gradient(circle at bottom, #1b2735 0%, #090a0f 100%);
   position: absolute; top: 0; left: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: center;
@@ -63,7 +63,7 @@
 
 /* 11. Bottle Ocean */
 .ocean-container {
-  width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1000;
+  width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1000;
   background: linear-gradient(to bottom, #87ceeb 0%, #1ca3ec 50%, #0077be 100%);
   display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
@@ -91,7 +91,7 @@
 
 /* 12. Ghost Typewriter */
 .typewriter-container {
-  width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1000;
+  width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1000;
   background: #050505; display: flex; align-items: center; justify-content: center;
 }
 .candle-light {
