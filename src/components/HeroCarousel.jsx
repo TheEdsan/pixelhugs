@@ -67,8 +67,6 @@ export default function HeroCarousel() {
                 <div className="live-preview-content">
                   <Viewer data={mockData} isPreview={false} isEditor={true} />
                 </div>
-                {/* Overlay to intercept clicks and keep it as a pure preview */}
-                <div className="live-preview-overlay"></div>
               </div>
 
               <div className="card-info-live">
