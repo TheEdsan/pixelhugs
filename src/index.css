@@ -614,6 +614,13 @@ body {
   color: #fff;
 }
 
+.form-group select optgroup {
+  background: #222;
+  color: #a855f7;
+  font-weight: bold;
+  font-style: normal;
+}
+
 .form-group input:focus, 
 .form-group textarea:focus,
 .form-group select:focus {

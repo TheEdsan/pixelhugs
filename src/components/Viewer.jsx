@@ -52,6 +52,20 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
     borderRadius: (isPreview || isEditor) ? '20px' : '0'
   };
 
+  // Fix contrast issues dynamically
+  let finalTextColor = theme.textColor;
+  const isDarkCard = theme.cardBg && (theme.cardBg.includes('0, 0, 0') || theme.cardBg.includes('10, 10, 10'));
+  const isLightCard = theme.cardBg && (theme.cardBg.includes('255, 255, 255') || theme.cardBg.includes('250, 250, 250'));
+  
+  // If card is dark but text is dark, force light text
+  if (isDarkCard && ['#000000', '#111827', '#0f172a', '#78350f', '#7f1d1d', '#9d174d', '#1e3a8a', '#064e3b'].includes(finalTextColor)) {
+    finalTextColor = '#ffffff';
+  } 
+  // If card is light but text is light, force dark text
+  else if (isLightCard && ['#ffffff', '#f8fafc', '#fef3c7', '#fee2e2', '#fcd34d'].includes(finalTextColor)) {
+    finalTextColor = '#000000';
+  }
+
   const cardStyle = {
     background: theme.cardBg || 'rgba(255, 255, 255, 0.1)',
     backdropFilter: 'blur(10px)',
@@ -62,7 +76,7 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
     width: '90%',
     textAlign: 'center',
     margin: '0 auto',
-    color: theme.textColor
+    color: finalTextColor
   };
 
   const innerContent = (
