@@ -45,8 +45,8 @@ export default function HeroCarousel({ onSelectTheme }) {
       
       <div className="carousel-scroll" ref={scrollRef}>
         {showcaseItems.map((item, idx) => {
-          // Use alternating themes for variety
-          const themesList = ['love_watercolor', 'neon_vibe', 'birthday_minimal', 'festive_women', 'festive_men'];
+          // Use valid theme IDs from templates.js
+          const themesList = ['theme_1', 'theme_16', 'theme_43', 'theme_27', 'theme_5'];
           const theme = themesList[idx % themesList.length];
           const mockData = {
             layoutId: item.id,

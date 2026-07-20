@@ -53,15 +53,16 @@ export default function Viewer({ data, isPreview = false, isEditor = false }) {
   };
 
   const cardStyle = {
-    background: theme.cardBg,
-    padding: '2.5rem',
+    background: theme.cardBg || 'rgba(255, 255, 255, 0.1)',
+    backdropFilter: 'blur(10px)',
+    padding: '2rem',
     borderRadius: '20px',
-    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
     maxWidth: '500px',
-    width: '100%',
+    width: '90%',
     textAlign: 'center',
-    zIndex: 10,
-    backdropFilter: 'blur(10px)'
+    margin: '0 auto',
+    color: theme.textColor
   };
 
   const innerContent = (

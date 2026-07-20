@@ -472,8 +472,24 @@ body {
 /* Editor Override */
 .editor-layout {
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .editor-layout {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+  .editor-sidebar {
+    width: 100% !important;
+    max-height: 50vh;
+  }
+  .editor-preview {
+    min-height: 50vh;
+  }
 }
 
 .editor-sidebar {
