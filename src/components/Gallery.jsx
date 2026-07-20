@@ -23,9 +23,6 @@ export default function Gallery({ onSelectTheme }) {
 
   return (
     <div className="landing-page">
-      {/* Hero Showcase Carousel */}
-      <HeroCarousel />
-
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-badge">Zero Database • 100% Privado</div>
@@ -62,27 +59,8 @@ export default function Gallery({ onSelectTheme }) {
         </div>
       </section>
 
-      {/* Features Spotlight */}
-      <section className="features-section">
-        <h2 className="section-title">8 Formatos Virales Diferentes</h2>
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-icon">🏃‍♂️</div>
-            <h3 className="feature-title">Botón Escurridizo</h3>
-            <p className="feature-desc">Perfecto para hacer preguntas capciosas. El botón "No" escapará de su dedo cada vez que intenten presionarlo.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">🪙</div>
-            <h3 className="feature-title">Raspa y Gana</h3>
-            <p className="feature-desc">Una experiencia táctil donde tienen que raspar físicamente la pantalla con su dedo para revelar tu sorpresa.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">🔒</div>
-            <h3 className="feature-title">Candado Secreto</h3>
-            <p className="feature-desc">Protege tu mensaje. Solo podrán leerlo si ingresan el código PIN correcto (como la fecha de aniversario).</p>
-          </div>
-        </div>
-      </section>
+      {/* Hero Showcase Carousel (Moved down) */}
+      <HeroCarousel />
 
       {/* The Gallery */}
       <section id="gallery" className="gallery-section">
