@@ -3,6 +3,7 @@ import { themes } from '../data/templates';
 import LiveThumbnail from './LiveThumbnail';
 import AdBanner from './AdBanner';
 import TipJarModal from './TipJarModal';
+import HeroCarousel from './HeroCarousel';
 
 export default function Gallery({ onSelectTheme }) {
   const [activeCategory, setActiveCategory] = useState('Todos');
@@ -22,6 +23,9 @@ export default function Gallery({ onSelectTheme }) {
 
   return (
     <div className="landing-page">
+      {/* Hero Showcase Carousel */}
+      <HeroCarousel />
+
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-badge">Zero Database • 100% Privado</div>
